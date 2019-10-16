@@ -1,0 +1,6 @@
+
+- This extenstion does not use cookies
+- This extension neither collects technical nor interaction data
+- This extension does not collect personally identifying information
+
+
