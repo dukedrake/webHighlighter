@@ -12,6 +12,8 @@ while(n = walk.nextNode()){
 	if(nTest && (allNodes.indexOf(n.parentNode)===-1)){
 		allNodes.push(n.parentNode);
 		n.parentNode.addEventListener('click', addLocListener, false);
+		n.parentNode.addEventListener('mouseover', toggleClassOver, false);
+		n.parentNode.addEventListener('mouseout', toggleClassOut, false);
 	}
 }
 

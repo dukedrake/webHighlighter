@@ -27,11 +27,26 @@ let cssPath = (el) => {
 }
 
 
+let storedBackground = "";
+
+let toggleClassOver = (e) => {
+	e.target.classList.toggle('locHighlightHover');
+	// storedBackground = window.getComputedStyle(e.target).backgroundColor;
+	// e.target.style.backgroundColor = "rgba(60, 60, 255, 0.2)";
+}
+
+let toggleClassOut = (e) => {
+	e.target.classList.toggle('locHighlightHover');
+	// let restorBackgroundColor = storedBackground == "rgba(60, 60, 255, 0.2)" ? "transparent" : storedBackground;
+	// e.target.style.backgroundColor = restorBackgroundColor;
+}
+
 
 let addLocListener = (e) => {
 	e.stopPropagation();
 	e.preventDefault();
 	let cssPathStr = cssPath(e.target);
+	// build target link
 	const curHrefArr = window.location.href.split("#_#");
 	const baseLink = curHrefArr.length > 1 ? curHrefArr[0] : window.location.href;
 	const targetLink = baseLink + "#_#" + cssPathStr;
@@ -88,6 +103,8 @@ let addLocListener = (e) => {
 
 let removeLocListener = (cnode) => {
 	cnode.removeEventListener('click', addLocListener, false);
+	cnode.removeEventListener('mouseover', toggleClassOver, false);
+	cnode.removeEventListener('mouseout', toggleClassOut, false);
   return true;
 }
 

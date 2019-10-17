@@ -15,10 +15,11 @@ function handleClick(e) {
 			if(!(activeTab.id in tabData)) {
 				tabData[activeTab.id] = { status: false };
 				console.log("INIT!");
-				const css = "#webhighlightpath { position: fixed; top: 0px; right: 20px; padding: 10px 14px; border: 4px solid #333; border-top-width: 0px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; min-width: 120px; background: #F2F2FF; font-size: 16px; font-weight: bold;}\
+				const css = "#webhighlightpath { position: fixed; z-index: 2147483649; top: 0px; right: 20px; padding: 10px 14px; border: 4px solid #333; border-top-width: 0px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; min-width: 120px; background: #F2F2FF; font-size: 16px; font-weight: bold;}\
 						 #webhighlightpath a { display: inline-block; margin-right: 14px;}\
 						 #webhighlightpath button {font-size: 14px;}\
 						 .locHighlight { border: 2px dashed #55F; border-radius: 6px; padding: 4px 6px; }\
+						 .locHighlightHover { background: rgba(60, 60, 255, 0.2) !important; border-bottom: 2px dashed #55F; }\
 						 .remHighlight { border: 4px solid  #00F; border-radius: 6px; padding: 4px 6px; }";
 				browser.tabs.insertCSS({code: css});
 				browser.tabs.executeScript({
