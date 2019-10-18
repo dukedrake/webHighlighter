@@ -2,11 +2,12 @@
 
 Firefox extension to highlight and share links to arbitrary elements on a webpage. 
   
-All elements in a DOM-tree of a HTML document are individually addressable - probably best known from addressing CSS elements (cf. CSS specificity). So ... the thought of enhancing the URL-scheme (the fragment-part to be exact) to accomodate a path compatible with `document.querySelector()` was not too far fetched after all.  
+All elements in a DOM-tree of a HTML document are individually addressable - probably best known from addressing CSS elements (cf. CSS specificity). So ... the thought of enhancing the URL-scheme (the fragment-part to be exact) to accomodate a path compatible with `document.querySelector()` was not too far fetched after all. 
   
 Ever wanted to link a specific paragraph/image/link/table cell/list item/etc. of a long webpage to a friend/colleague/...webpage? Now you can \o/
   
-Click hte new extension icon (blue icon, black border) to turn on the extension for the current tab. The icon now gets a white boarder to indicate it is active. You now can highlight any element on a webpage by clicking on it. After the click
+## Usage
+Click the new extension icon (blue icon, black border) to turn on the extension for the current tab. The icon now gets a white boarder to indicate it is active. You now can highlight any element on a webpage by clicking on it. After the click
 * a dashed blue border will appear around the element
 * a new block near the top right corner of the webpage will appear containing
 * a link labeled "Highlight Link"
