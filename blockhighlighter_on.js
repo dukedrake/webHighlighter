@@ -1,19 +1,24 @@
 console.log('Blockhighlighter loaded!');
 
-topEl = document.querySelector('#content');
-if(!topEl) topEl = document.querySelector('body');
+Window.webHighlighter.topEl = document.querySelector('#content');
+if(!Window.webHighlighter.topEl) Window.webHighlighter.topEl = document.querySelector('body');
 
-walk = document.createTreeWalker(topEl, NodeFilter.SHOW_TEXT, null, false);
+
+walkNodes = document.createTreeWalker(Window.webHighlighter.topEl, NodeFilter.SHOW_TEXT, null, false);
 allNodes = [];
 
-while(n = walk.nextNode()){
-	let nTest = n.nodeValue.replace(/( |\t)/g,'');
+while(curNode = walkNodes.nextNode()){
+	let nTest = curNode.nodeValue.replace(/( |\t)/g,'');
+	// avoid self referencial listeners
+	let selfTest = curNode.parentNode.closest('#webhighlightpath');
+	
+
 	// avoid multiple listeners for siblings
-	if(nTest && (allNodes.indexOf(n.parentNode)===-1)){
-		allNodes.push(n.parentNode);
-		n.parentNode.addEventListener('click', addLocListener, false);
-		n.parentNode.addEventListener('mouseover', toggleClassOver, false);
-		n.parentNode.addEventListener('mouseout', toggleClassOut, false);
+	if(nTest && (allNodes.indexOf(curNode.parentNode)===-1) && !selfTest){
+		allNodes.push(curNode.parentNode);
+		curNode.parentNode.addEventListener('click',     Window.webHighlighter.addLocListener);
+		curNode.parentNode.addEventListener('mouseover', Window.webHighlighter.toggleClassOver);
+		curNode.parentNode.addEventListener('mouseout',  Window.webHighlighter.toggleClassOut);
 	}
 }
 
