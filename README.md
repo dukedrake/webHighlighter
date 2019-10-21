@@ -14,7 +14,7 @@ Until publishing on AMO:
 4) Klick the Button "Add temporary Add-on ..." ("Temporäres Add-On laden ...) and choose the `manifest.json` file
 
 ## Usage
-Click the new extension icon (blue icon, black border) to turn on the extension for the current tab. Alternative: Keystroke Alt+Shift+S. The icon now gets a white boarder to indicate it is active. You now can highlight any element on a webpage by clicking on it. After the click
+Click the new extension icon (blue icon, black border) to turn on the extension for the current tab. Alternative: Keystroke Alt+Shift+S. The icon now gets a white border to indicate it is active. You now can highlight any element on a webpage by clicking on it. After the click
 * a dashed blue border will appear around the element
 * a new block near the top right corner of the webpage will appear containing
 * a link labeled "Highlight Link"
@@ -25,6 +25,7 @@ click the "Copy Link to Clipboard"-Button
   
 You can switch the extenstion off again by clicking the extension icon again.  
   
+## Permissions
 obligatory permissions:  
 * activeTab
   
@@ -33,6 +34,9 @@ permission needed for protocol handler to work:
   
 optional permission:  
 * clipboardWrite
+  
+## Caveats
+As with anchor links in general, one should keep in mind that they are not `permalinks`, i.e. they might change over time, especially on startpages of highly dynamic websites like newspapers, webshops, etc.
   
 ## TODO
 
