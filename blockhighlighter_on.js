@@ -9,14 +9,12 @@ allNodes = [];
 
 while(curNode = walkNodes.nextNode()){
 	let nTest = curNode.nodeValue.replace(/( |\t)/g,'');
-	// avoid self referencial listeners
-	let selfTest = curNode.parentNode.closest('#webhighlightpath');
-	
 
 	// avoid multiple listeners for siblings
-	if(nTest && (allNodes.indexOf(curNode.parentNode)===-1) && !selfTest){
+	if(nTest && (allNodes.indexOf(curNode.parentNode)===-1)){
 		allNodes.push(curNode.parentNode);
-		curNode.parentNode.addEventListener('click',     Window.webHighlighter.addLocListener);
+		curNode.parentNode.classList.add('webh');
+		curNode.parentNode.addEventListener('click',     Window.webHighlighter.addLocListener, true);
 		curNode.parentNode.addEventListener('mouseover', Window.webHighlighter.toggleClassOver);
 		curNode.parentNode.addEventListener('mouseout',  Window.webHighlighter.toggleClassOut);
 	}

@@ -20,6 +20,9 @@ if(!("webHighlighter" in Window)){
 			el=el.parentNode;
 		}
 		if(el.nodeName.toLowerCase()!='body') path.unshift('#'+el.id);
+		
+		if( path.indexOf('#webhighlightpath') > -1) return false;
+		
 		return encodeURIComponent(path.join(' > '));
 	}
 
@@ -43,6 +46,7 @@ if(!("webHighlighter" in Window)){
 		e.stopPropagation();
 		e.preventDefault();
 		let cssPathStr = Window.webHighlighter.cssPath(e.target);
+		if(!cssPathStr) return false;
 		
 		// build target link
 		const highlightTest = window.location.href.split("#|_|");
