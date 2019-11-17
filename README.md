@@ -37,6 +37,11 @@ optional permission:
   
 ## Caveats
 As with anchor links in general, one should keep in mind that they are not `permalinks`, i.e. they might change over time, especially on startpages of highly dynamic websites like newspapers, webshops, etc.
+This limitation also applies to
+- content that didn't load yet (load on scroll)
+- content that isn't visible (collapsed folds)
+- content that is individual to the one who links the block
+ 
   
 ## TODO
 
