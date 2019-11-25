@@ -2,7 +2,7 @@
 
 let tabData = {};
 
-var browser = browser || chrome;
+// var browser = browser || chrome;
 
 			
 browser.browserAction.onClicked.addListener(handleClick);
@@ -44,7 +44,7 @@ function handleClick(e) {
 			if(tabData[activeTab.id].status) {
 				browser.browserAction.setIcon( {"path": "icons/icon_32.png", "tabId" : activeTab.id });
 				browser.browserAction.setTitle( {"title": "webHighlighter (off)" });
-				console.log("removing listeners ...");
+				console.log("removing listeners ...!");
 				browser.tabs.executeScript({
 					file: 'blockhighlighter_off.js'
 				});
@@ -90,9 +90,11 @@ function handleClick(e) {
 			// only change DOM if there is something to highlight
 			if(cssPath !== '') { 
 				const procBlocks = '\
-				targetEl = document.querySelector("'+cssPath+'");\
-				targetEl.classList.add("remHighlight");\
-				targetEl.scrollIntoView({block: "start", behavior: "smooth"});';
+				targetHlEl = document.querySelector("'+cssPath+'");\
+				console.log(targetHlEl);\
+				console.log("'+cssPath+'");\
+				targetHlEl.classList.add("remHighlight");\
+				targetHlEl.scrollIntoView({block: "start", behavior: "smooth"});';
 				
 				browser.tabs.executeScript({
 					code: procBlocks

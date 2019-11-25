@@ -14,7 +14,7 @@ while(curNode = walkNodes.nextNode()){
 	if(nTest && (allNodes.indexOf(curNode.parentNode)===-1)){
 		allNodes.push(curNode.parentNode);
 		curNode.parentNode.classList.add('webh');
-		curNode.parentNode.addEventListener('click',     Window.webHighlighter.addLocListener, true);
+		curNode.parentNode.addEventListener('click',     Window.webHighlighter.addLocListener);
 		curNode.parentNode.addEventListener('mouseover', Window.webHighlighter.toggleClassOver);
 		curNode.parentNode.addEventListener('mouseout',  Window.webHighlighter.toggleClassOut);
 	}

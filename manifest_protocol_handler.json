@@ -29,7 +29,7 @@
     },
 		
 		"background": {
-			"scripts": ["browser-polyfill.min.js","background.js"],
+			"scripts": ["background.js"],
 			"persistent": false
 		},
 		
@@ -42,6 +42,14 @@
 		
 		"optional_permissions": [
 			"clipboardWrite"
+		],
+		
+		"protocol_handlers": [
+			{
+				"protocol": "web+comm",
+				"name": "WebHighlighter Extension",
+				"uriTemplate": "/prothandler.html#%s"
+			}
 		]
 		
 }
