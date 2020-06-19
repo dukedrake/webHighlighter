@@ -1,7 +1,10 @@
 # WebHighlighter
 
 Firefox extension to highlight and share links to arbitrary elements on a webpage. 
-  
+
+Oh time flies so fast. While being busy with studies and working, the W3C seems to have come up with an official way of linking to text fragments! How neat is that! =D https://wicg.github.io/scroll-to-text-fragment/ . And Google already published an extension to link to selected text: https://chrome.google.com/webstore/detail/link-to-text-fragment/pbcodcjpfjdpcineamnnmbkkmkdpajjg (article on web.dev: https://web.dev/text-fragments/ ). So, finally, after about 30years of waiting, development is really picking up speed here! 
+
+
 All elements in a DOM-tree of a HTML document are individually addressable - probably best known from addressing CSS elements (cf. CSS specificity). So ... the thought of enhancing the URL-scheme (the fragment-part to be exact) to accomodate a path compatible with `document.querySelector()` was not too far fetched after all. 
   
 Ever wanted to link a specific paragraph/image/link/table cell/list item/etc. of a long webpage to a friend/colleague/...webpage? Now you can \o/
