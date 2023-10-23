@@ -2,7 +2,12 @@
 
 Firefox extension to highlight and share links to arbitrary elements on a webpage. 
 
-Oh time flies so fast. While being busy with studies and working, the W3C seems to have come up with an official way of linking to text fragments! How neat is that! =D https://wicg.github.io/scroll-to-text-fragment/ . And Google already published an extension to link to selected text: https://chrome.google.com/webstore/detail/link-to-text-fragment/pbcodcjpfjdpcineamnnmbkkmkdpajjg (article on web.dev: https://web.dev/text-fragments/ ). So, finally, after about 30years of waiting, development is really picking up speed here! 
+23.10.2023 note
+Apparently development started earlier https://github.com/WICG/scroll-to-text-fragment/commit/15fa2ed60a44cd1338a36f154efa8a20c8b3d785 - hence, this is a case of the parallel innovation of a similar feature.
+Add on currently doesn't work on firefox anymore, gotta fix that! (incidentally text-fragments don't work in firefox anymore, either https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=download )
+
+Oh time flies so fast. While being busy with studies and working, the W3C seems to have come up with an official way of linking to text fragments! How neat is that! =D https://wicg.github.io/scroll-to-text-fragment/ . And Google already published an extension to link to selected text: https://chrome.google.com/webstore/detail/link-to-text-fragment/pbcodcjpfjdpcineamnnmbkkmkdpajjg (article on web.dev: https://web.dev/text-fragments/ ). So, finally, after about 30years of waiting, development is really picking up speed here!  
+
 
 
 All elements in a DOM-tree of a HTML document are individually addressable - probably best known from addressing CSS elements (cf. CSS specificity). So ... the thought of enhancing the URL-scheme (the fragment-part to be exact) to accomodate a path compatible with `document.querySelector()` was not too far fetched after all. 
