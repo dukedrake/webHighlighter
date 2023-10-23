@@ -2,8 +2,8 @@
 
 Firefox extension to highlight and share links to arbitrary elements on a webpage. 
 
-23.10.2023 note
-Apparently development started earlier https://github.com/WICG/scroll-to-text-fragment/commit/15fa2ed60a44cd1338a36f154efa8a20c8b3d785 - hence, this is a case of the parallel innovation of a similar feature.
+23.10.2023 note  
+Apparently development on the Firefox text-fragment started even earlier https://github.com/WICG/scroll-to-text-fragment/commit/15fa2ed60a44cd1338a36f154efa8a20c8b3d785 - hence, this is a case of the parallel innovation of a similar feature.  
 Add on currently doesn't work on firefox anymore, gotta fix that! (incidentally text-fragments don't work in firefox anymore, either https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=download )
 
 Oh time flies so fast. While being busy with studies and working, the W3C seems to have come up with an official way of linking to text fragments! How neat is that! =D https://wicg.github.io/scroll-to-text-fragment/ . And Google already published an extension to link to selected text: https://chrome.google.com/webstore/detail/link-to-text-fragment/pbcodcjpfjdpcineamnnmbkkmkdpajjg (article on web.dev: https://web.dev/text-fragments/ ). So, finally, after about 30years of waiting, development is really picking up speed here!  
